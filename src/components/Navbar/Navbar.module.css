@@ -1,0 +1,83 @@
+@import "../../vars.css";
+
+.navbar {
+    position: relative; /* positions the element in the normal document flow, but allows child elements to be positioned absolute relative to it. Also enables z-index to work */
+    display: flex; /* turns the navbar into a flexbox container, making its direct children flex items that can be aligned and distributed easily */
+    align-items: center; /* vertically centers all flex children along the cross axis (since the default flex direction is row, this means vertically) */
+    justify-content: space-between; /* spreads flex children along the main axis (horizontally), pushing the first item to the far left and the last to the far right, with equal space between any items in between */
+    padding-top: 61px; /* number from figma... */
+    z-index: 2; /* controls stacking order. A value of 2 places this element in front of elements with a lower z-index (like 0 or 1). Requires position: relative (or any non-static position) to take effect */
+    margin: 0 10%; /* vertical margin = 0, horizontal margin = 10% */
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text)
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 47px; /* figma again */
+    list-style: none; /* get rid of bullet point before each list item */
+}
+
+.menuItems a {  /* target anchor tags wthin menuItems */
+    font-size: 25px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.menuBtn {
+    display: none;
+}
+
+/* make website responsive based on width of screen using media queries */
+/* these styles are added on top of what was defined beforehand outside the @media block */
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer; /* change cursor on hover */
+    }
+
+    .menuItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        border-radius: 10px;
+        background: rbg(25, 55, 109);
+        background: linear-gradient(
+            0deg, 
+            rgba(25, 55, 109, 0.2) 0%, 
+            rgba(25, 55, 109, 1) 100%
+        );
+        padding: 24px 33px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .menuOpen {
+        display: flex; /* change display from none to flex */
+        z-index: 1;
+    }
+}
