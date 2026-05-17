@@ -1,12 +1,13 @@
 @import "../../vars.css";
 
 .navbar {
-    position: relative; /* positions the element in the normal document flow, but allows child elements to be positioned absolute relative to it. Also enables z-index to work */
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex; /* turns the navbar into a flexbox container, making its direct children flex items that can be aligned and distributed easily */
     align-items: center; /* vertically centers all flex children along the cross axis (since the default flex direction is row, this means vertically) */
     justify-content: space-between; /* spreads flex children along the main axis (horizontally), pushing the first item to the far left and the last to the far right, with equal space between any items in between */
     padding-top: 61px; /* number from figma... */
-    z-index: 2; /* controls stacking order. A value of 2 places this element in front of elements with a lower z-index (like 0 or 1). Requires position: relative (or any non-static position) to take effect */
     margin: 0 10%; /* vertical margin = 0, horizontal margin = 10% */
 }
 
