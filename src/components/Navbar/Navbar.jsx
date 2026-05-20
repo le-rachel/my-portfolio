@@ -3,9 +3,28 @@ import styles from './Navbar.module.css';
 import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    //const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <nav className={styles.navbar}>
+        <div className={styles.menu}>
+            <ul className={styles.menuItems}>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    /* 
     <nav className={styles.navbar}>
         <a className={styles.title} href="/">
             Portfolio
@@ -19,10 +38,10 @@ export const Navbar = () => {
                 alt="menu-button"
                 onClick={() => setMenuOpen(!menuOpen)}
             />
-            {/* unordered list (wrap className in `` to allow assignment of multiple diff classNames) */}
+            {/* unordered list (wrap className in `` to allow assignment of multiple diff classNames) }
             <ul 
             className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-            /* onClick... closes menu for user once user clicks a tab to navigate to */
+            /* onClick... closes menu for user once user clicks a tab to navigate to 
             onClick={() => setMenuOpen(false)}
             >
                 <li>
@@ -39,6 +58,6 @@ export const Navbar = () => {
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> */
   )
 };

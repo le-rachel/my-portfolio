@@ -1,14 +1,73 @@
 @import "../../vars.css";
 
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    padding: 10px;
+    padding-right: 100px;
+    width: 100%;
+    background-color: var(--color-dark);
+    box-shadow: 0px 10px 5px #00000030;
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 75px;
+    list-style: none; 
+}
+
+.menuItems a {  
+    font-size: 25px;
+    font-weight: 500;
+    font-family: var(--font-ibm-plex-mono);
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.menuItems a:hover {
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 830px) {
+    .navbar {
+        justify-content: center;
+        padding-right: 0;
+        height: 3rem;
+    }
+    
+    .menu {
+        align-items: center;
+    }
+
+    .menuItems {
+        gap: 25px;
+    }
+
+    .menuItems a {
+        font-size: 17px;
+    }
+
+}
+
+/*
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    display: flex; /* turns the navbar into a flexbox container, making its direct children flex items that can be aligned and distributed easily */
-    align-items: center; /* vertically centers all flex children along the cross axis (since the default flex direction is row, this means vertically) */
-    justify-content: space-between; /* spreads flex children along the main axis (horizontally), pushing the first item to the far left and the last to the far right, with equal space between any items in between */
-    padding-top: 61px; /* number from figma... */
-    margin: 0 10%; /* vertical margin = 0, horizontal margin = 10% */
+    display: flex; /* turns the navbar into a flexbox container, making its direct children flex items that can be aligned and distributed easily 
+    align-items: center; /* vertically centers all flex children along the cross axis (since the default flex direction is row, this means vertically) 
+    justify-content: space-between; /* spreads flex children along the main axis (horizontally), pushing the first item to the far left and the last to the far right, with equal space between any items in between 
+    padding-top: 61px; /* number from figma... 
+    margin: 0 10%; /* vertical margin = 0, horizontal margin = 10% 
 }
 
 .title {
@@ -25,10 +84,10 @@
 .menuItems {
     display: flex;
     gap: 47px; /* figma again */
-    list-style: none; /* get rid of bullet point before each list item */
+    list-style: none; /* get rid of bullet point before each list item 
 }
 
-.menuItems a {  /* target anchor tags wthin menuItems */
+.menuItems a {  /* target anchor tags wthin menuItems 
     font-size: 25px;
     color: var(--color-text);
     text-decoration: none;
@@ -38,8 +97,8 @@
     display: none;
 }
 
-/* make website responsive based on width of screen using media queries */
-/* these styles are added on top of what was defined beforehand outside the @media block */
+/* make website responsive based on width of screen using media queries 
+/* these styles are added on top of what was defined beforehand outside the @media block 
 @media screen and (max-width: 830px) {
     .navbar {
         flex-direction: column;
@@ -58,7 +117,7 @@
 
     .menuBtn {
         display: block;
-        cursor: pointer; /* change cursor on hover */
+        cursor: pointer; /* change cursor on hover 
     }
 
     .menuItems {
@@ -78,7 +137,7 @@
     }
 
     .menuOpen {
-        display: flex; /* change display from none to flex */
+        display: flex; /* change display from none to flex 
         z-index: 1;
     }
-}
+} */

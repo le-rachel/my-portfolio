@@ -137,9 +137,14 @@
   font-family: "Outfit", Arial, Helvetica, sans-serif; /* default is Outfit, then go down rest of the options if not available */
 }
 
+body {
+  height: auto;
+}
+
 /* makes navigation when clicking on navbar smooth */
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
