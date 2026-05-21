@@ -26,7 +26,7 @@ export const About = () => {
 
   return (
     <section className={styles.container} id="about">
-         <div className={styles.topBlur} />
+        <div className={styles.topBlur} />
         <div className={styles.bottomBlur} />
         <div className={styles.title}>
             <h2>About</h2>
