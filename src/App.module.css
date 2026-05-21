@@ -3,8 +3,8 @@
 /* Renamed App.css to App.module.css to allow use of css modules */
 
 .App {
-    background-color: var(--color-bg); /* use variables defined in vars.css */
+    background-color: var(--color-bg);
     width: 100%;
     height: 100%;
-    /*overflow: hidden; /* anything that goes past the width of the screen doesn't show */
+    overflow-x: clip;
 }
