@@ -8,8 +8,8 @@
     --color-bg: #1b1227;
 
     /* Fonts */
-    --font-robot: "Roboto";
     --font-playfair-display: "Playfair Display";
     --font-playfair: "Playfair";
-    --font-ibm-plex-mono: "IBM Plex Mono"
+    --font-ibm-plex-mono: "IBM Plex Mono";
+    --font-dm-sans: "DM Sans";
 }

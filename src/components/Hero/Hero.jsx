@@ -2,7 +2,6 @@ import React from 'react';
 import { getImageUrl } from '../../utils'
 import styles from './Hero.module.css';
 import DotField from '../../components/DotField/DotField';
-import DecryptedText from '../../components/DecryptedText/DecryptedText';
 
 export const Hero = () => {
   return (
@@ -26,15 +25,6 @@ export const Hero = () => {
         <div className={styles.text}>
             <h3>Welcome to my space!</h3>
             <h1>Hi, I'm <span className={styles.name}>Rachel</span>.</h1>
-            {/*<h1> 
-                <DecryptedText
-                text="Hi, I'm Rachel."
-                speed={10}
-                revealDirection="start"
-                sequential
-                useOriginalCharsOnly={false}
-                />
-            </h1> */}
             <h2>I'm an aspiring software engineer.</h2>
             <a className={styles.button} href="#about">Have a look around!<span className={styles.arrow}> &darr;</span></a>
         </div>
