@@ -81,8 +81,8 @@ export const About = () => {
                     direction="left"
                     logoHeight={60}
                     gap={60}
-                    hoverSpeed={50}
-                    scaleOnHover={false}
+                    hoverSpeed={15}
+                    scaleOnHover={true}
                     fadeOut
                     fadeOutColor="#1b1227"
                     ariaLabel="Skills"

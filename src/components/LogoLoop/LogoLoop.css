@@ -1,3 +1,5 @@
+@import "../../vars.css";
+
 .logoloop {
   position: relative;
 
@@ -70,6 +72,34 @@
 .logoloop__node {
   display: inline-flex;
   align-items: center;
+}
+
+.logoloop__item-inner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoloop__label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  margin-top: 5px;
+  padding-top: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-family: var(--font-ibm-plex-mono);
+  text-align: center;
+}
+
+.logoloop__item:hover .logoloop__label {
+  opacity: 1;
 }
 
 .logoloop__item img {

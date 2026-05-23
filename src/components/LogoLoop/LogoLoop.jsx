@@ -268,7 +268,10 @@ export const LogoLoop = memo(
         );
         return (
           <li className="logoloop__item" key={key} role="listitem">
-            {itemContent}
+            <span className="logoloop__item-inner">
+              {itemContent}
+              {item.title && <p className="logoloop__label">{item.title}</p>}
+            </span>
           </li>
         );
       },
