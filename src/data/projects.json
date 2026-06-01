@@ -1,26 +1,61 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Huffman File Compressor",
+    "imageSrc": "projects/huffman-image.png",
+    "description": "Developed logic for file compression and decompression in Java using Huffman Coding Trees.",
+    "skills": ["Java", "Data Structures", "Object Oriented Programming"],
+    "about": "Nov 2025",
+    "info": ["Built a compression and decompression pipeline in Java using Huffman coding with both count-based and tree-based header formats",
+            "Implemented a custom generic priority queue from scratch to construct the Huffman coding tree",
+            "Engineered decompression to fully reconstruct the Huffman coding tree from the compressed file's header alone, with no shared state from the compression phase"]
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Command Interpreter",
+    "imageSrc": "projects/command-interpreter-image.png",
+    "description": "Developed a command interpreter in C for a custom assembly-like language, from tokenization to execution.",
+    "skills": ["C", "Compilers", "Data Structures", "Systems Programming"],
+    "about": "Jan-Feb 2026",
+    "info": ["Built a full interpreter pipeline in C — tokenizer, recursive parser, and execution engine — supporting 20 commands across arithmetic, bitwise, memory, and control flow operations",
+            "Implemented a custom hash table and call stack from scratch to handle branch resolution and recursive function calls",
+            "Added layered error handling across lexical, syntactic, type inference, and evaluation stages, with manual memory management verified leak-free"]
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Dynamic Memory Allocator",
+    "imageSrc": "projects/memory-allocator-image.png",
+    "description": "Built a dynamic memory allocator in C, implementing custom malloc and free functions.",
+    "skills": ["C", "Memory Management", "Systems Programming"],
+    "about": "Feb 2026",
+    "info": ["Implemented umalloc and ufree in C using a binned explicit free list with 4 size classes, LIFO insertion, and first-fit placement",
+            "Engineered deferred coalescing to merge free blocks across the heap only when no suitable block is available, improving average space utilization by 65% and achieving a throughput exceeding 8500 operations per millisecond",
+            "Built a heap consistency checker to verify free list ordering, block alignment, absence of overlaps, and that no allocated blocks remained on the free list"]
+  },
+  {
+    "title": "Instruction Pipeline System Emulator",
+    "imageSrc": "projects/system-emulator-image.png",
+    "description": "Simulated a five-stage pipelined processor in C, from hardware elements to hazard control and cache integration.",
+    "skills": ["C", "ARM64 Assembly", "Computer Architecture"],
+    "about": "Mar-Apr 2026",
+    "info": ["Implemented core hardware elements in C including an ALU, ripple-carry adder, and register file to emulate the computational building blocks of a CPU",
+            "Built a five-stage pipeline simulator (fetch, decode, execute, memory, writeback) for the chArm-v5 ISA, resolving data and control hazards through forwarding, stalling, and squashing",
+            "Extended the ISA with 8 additional branching and conditional instructions, and optimized an ARM64 assembly function for minimum cycle count by identifying and eliminating pipeline hazards"]
+  },
+  {
+    "title": "NuTradish Mobile App",
+    "imageSrc": "projects/nutradish-image.png",
+    "description": "An AI-powered meal planning app that honors your cultural heritage while meeting your personal health goals.",
+    "skills": ["React", "Expo", "Typescript", "Git", "Python", "Supabase", "FastAPI"],
+    "about": "Jan-Apr 2026, Associated with UT Austin's Texas Convergent student organization",
+    "info": ["Co-developed as a tech member in a 7-person, cross-functional team with 3 other engineers, 2 designers, and 2 product managers",
+            "Built the React Native/Expo user profile onboarding flow — a multilingual animated welcome screen and a 6-screen profiling quiz collecting dietary goals, health conditions, allergens, caloric targets, and cuisine preferences to seed the Claude API's meal personalization context",
+            "Developed the community feed with a masonry-grid layout mixing curated and user-submitted recipe cards, featuring per-account likes and bookmarks"]
+  },
+  {
+    "title": "The Daily Texan Mobile App",
+    "imageSrc": "projects/dt-image.png",
+    "description": "Co-developed a cross-platform mobile news app for UT Austin's student newspaper.",
+    "skills": ["React", "Expo", "Typescript", "Git", "RestAPI", "Agile Development"],
+    "about": "Jan-Present, Associated with UT Austin's The Daily Texan organization",
+    "info": ["Translated Figma wireframes into production-ready screens with custom typography constants and cross-platform layout consistency",
+            "Integrate the WordPress REST API to fetch and render live articles with author, category, and date metadata"]
   }
 ]

@@ -1,5 +1,105 @@
 @import "../../vars.css";
 
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 0.25px solid var(--color-text);
+    border-radius: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 375px;
+    height: 375px;
+    overflow: hidden;
+    background-color: #2B1F3B;
+}
+
+.cardImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.cardImage img {
+    position: relative;
+    z-index: 2;
+}
+
+.cardImage div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #130A1D;
+    z-index: 1;
+}
+
+.cardContent {
+    padding: 10px 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardHeader h3 {
+    color: var(--color-text);
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    padding-right: 7px;
+}
+
+.cardHeader img {
+    max-height: 10px;
+}
+
+.cardContent p {
+    color: var(--color-text);
+    font-family: var(--font-dm-sans);
+    font-size: 16px;
+    text-align: left;
+    margin-top: 7px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.skill {
+    color: var(--color-text);
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #FFD13A80;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+
+
+
+/*
 .container {
     display: flex;
     flex-direction: column;
@@ -32,7 +132,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 6px;
-    list-style: none; /* remove bullet points */
+    list-style: none; /* remove bullet points 
 }
 
 .skill {
@@ -58,4 +158,4 @@
     border-radius: 100px;
     background: var(--color-primary);
     padding: 1px 22px;
-}
+} */
