@@ -1,9 +1,124 @@
 @import "../../vars.css";
 
+
+.container {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #130A1D;
+    border-radius: 25px;
+    margin: 10% 25%;
+    padding: 50px;
+}
+
+h3 {
+    color: var(--color-primary);
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.title {
+    position: relative;
+    z-index: 100;
+    align-items: center;
+   /* margin-bottom: -25px;*/
+}
+
+.title h2 {
+    font-family: var(--font-playfair);
+    color: var(--color-text);
+    font-size: 84px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title div {
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    height: 8px;
+    width:  275px;
+    margin-top: -33px;
+    margin-left: 50px;
+}
+
+.description {
+    color: var(--color-text);
+    font-family: var(--font-dm-sans);
+    font-size: 28px;
+    opacity: 0.75;
+    text-align: center;
+    text-wrap: wrap;
+    max-width: 70%;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.buttons div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.emailBtn, .linkedinBtn, .githubBtn {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 30px;
+    background-color: #FFD13A10;
+    padding: 10px 25px;
+}
+
+.emailBtn img, .linkedinBtn img, .githubBtn img {
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.emailBtn div, .linkedinBtn div, .githubBtn div {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.emailBtn span, .linkedinBtn span, .githubBtn span {
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.linkedinBtn span, .githubBtn span {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.emailBtn p, .linkedinBtn p, .githubBtn p {
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+
+
+
+
+/*
 .container {
     color: var(--color-text);
     margin-top: 120px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-dark);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -27,7 +142,7 @@
 .links {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* align to left hand side of column */
+    align-items: flex-start; /* align to left hand side of column 
     list-style: none;
     gap: 26px
 }
@@ -61,4 +176,4 @@
     .links {
         align-items: center;
     }
-}
+} */
