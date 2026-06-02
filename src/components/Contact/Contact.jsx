@@ -1,10 +1,24 @@
 import React from 'react';
 import { getImageUrl } from '../../utils';
 import styles from "./Contact.module.css";
+import Particles from '../Particles/Particles';
 
 export const Contact = () => {
   return (
-    <section id="contact" className={styles.container}>
+    <div id="contact" className={styles.wrapper}>
+    <section className={styles.container}>
+        <Particles
+            particleColors={["#FFD13A"]}
+            particleCount={250}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={1}
+            className={styles.background}
+        />
         <h3>Let's Connect!</h3>
         <div className={styles.title}>
             <h2>Contact</h2>
@@ -46,6 +60,7 @@ export const Contact = () => {
             </div>
         </ul>
     </section>
+    </div>
 
     /*
     <footer id="contact" className={styles.container}>
