@@ -4,6 +4,7 @@ import styles from "./Projects.module.css";
 
 import projects from "../../data/projects.json";
 import { ProjectCard } from './ProjectCard';
+import { getImageUrl } from '../../utils';
 
 export const Projects = () => {
   return (
@@ -18,6 +19,16 @@ export const Projects = () => {
                     <ProjectCard key={id} project={project} />
             )    
         })}</div>
+        <div className={styles.footer}>
+            <div className={styles.footerContent}>
+              <img
+                src={getImageUrl("projects/clock-yellow.png")}
+                alt="Clock icon"
+              />
+              <p>More projects coming soon!</p>
+            </div>
+            <div className={styles.line} />
+        </div>
     </section>
     /*
     <section className={styles.container} id="projects">
