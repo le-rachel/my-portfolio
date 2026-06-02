@@ -1,26 +1,128 @@
 @import "../../vars.css";
 
 .container {
-    margin-top: 76px;
-    color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 10%;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+   /* margin-bottom: -25px;*/
+}
+
+.title h2 {
+    font-family: var(--font-playfair);
+    color: var(--color-text);
+    font-size: 84px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title div {
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    height: 8px;
+    width:  300px;
+    margin-top: -33px;
+    margin-left: 40px;
 }
 
 .projects {
-  margin-top: 37px;
+  margin-top: 75px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;  /* since we use flex wrap, this handles responsiveness so we don't need to use @screen */
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  gap: 75px;
   width: 100%;
+  max-width: 1275px; /* 3 cards (375px each) + 2 gaps (75px each) */
+}
+
+.footer {
+    margin-top: 75px;
+    position: relative;
+    width: 75%;
+    max-width: 1275px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+.footerContent {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    height: auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 12px;
+}
+
+.footer img {
+    opacity: 0.5;
+    margin-right: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer p {
+    /*color: #ffffff80;*/
+    color: #FFD13A80;
+    font-family: var(--font-ibm-plex-mono);
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.line {
+    /*background-color: #ffffff80;*/
+    background-color: #FFD13A80;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        scale: 0.9;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        scale: 1;
+    }
+
+    .projects {
+        justify-content: center;
+    }
+
+    .footer {
+        max-width: 375px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        scale: 0.9;
+    }
+
+    .projects {
+        gap: 25px;
+    }
+
+    .footer {
+        margin-bottom: 25px;
+    }
 }

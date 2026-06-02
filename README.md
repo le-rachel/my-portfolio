@@ -1,4 +1,5 @@
-My web portfolio detailing more about me and my projects!
+My responsive web portfolio detailing more about me and my projects!
+
 
 ---
 
