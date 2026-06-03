@@ -7,7 +7,7 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-dark-bg)
+    /*background-color: var(--color-dark-bg)*/
 }
 
 .background {
@@ -64,8 +64,8 @@
     font-weight: 500;
     font-family: var(--font-ibm-plex-mono);
     color: var(--color-primary);
-    /*background-color: #1b122780;*/
-    background-color: #130A1D80;
+    background-color: #1b122780;
+    /*background-color: #130A1D80;*/
     border: 2px solid var(--color-primary);
     border-radius: 15px;
     cursor: pointer;
