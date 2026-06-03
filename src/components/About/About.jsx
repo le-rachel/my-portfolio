@@ -42,7 +42,7 @@ export const About = () => {
                 <div className={styles.imageShadow} />
             </div>
             <div className={styles.rightContent}>
-                <p>Hi there, my name is Rachel Le. I am an undergraduate Computer Science student at the University of Texas at Austin pursuing double 
+                <p>Hi, my name is Rachel Le. I am an undergraduate Computer Science student at the University of Texas at Austin pursuing double 
                     minors in Business Foundations and Statistics & Data Science, with an expected graduation date of May 2028. Building on my experience 
                     in quality assurance testing and software development, I strive to continuously improve my technical and collaborative skills as a developer. 
                     Outside of work, I enjoy spending time with my friends and family, trying new foods, shopping, and relaxing with some good TV!</p>
