@@ -1,11 +1,13 @@
 /* variables allow you to define things like fonts and colors in a single place so that it is easier to edit later */
 :root {
     /* Colors */
-    --color-text: #fff;
+    --color-text: #ffffff;
     --color-primary: #FFD13A;
     --color-secondary: #40288D;
     --color-dark: #220b47;
     --color-bg: #1b1227;
+    --color-dark-bg: #130A1D;
+    --color-light-bg: #2B1F3B;
 
     /* Fonts */
     --font-playfair-display: "Playfair Display";
