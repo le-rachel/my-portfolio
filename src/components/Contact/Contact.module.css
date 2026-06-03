@@ -1,64 +1,360 @@
 @import "../../vars.css";
 
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 25px;
+}
+
 .container {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark-bg);
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 50px;
+    min-width: 50vw;
+    max-width: 75vw;
+    height: 80vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: inherit;
+    opacity: 0.25;
+}
+
+.container h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--color-primary);
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    opacity: 0.4;
+}
+
+.title {
+    position: relative;
+    z-index: 100;
+    align-items: center;
+}
+
+.title h2 {
+    font-family: var(--font-playfair);
     color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-secondary);
+    font-size: 84px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title div {
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    height: 8px;
+    width:  275px;
+    margin-top: -33px;
+    margin-left: 50px;
+}
+
+.description {
+    position: relative;
+    z-index: 1;
+    color: var(--color-text);
+    font-family: var(--font-dm-sans);
+    font-size: 24px;
+    opacity: 0.75;
+    text-align: center;
+    text-wrap: wrap;
+    max-width: 45%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 50%;
+    align-items: stretch;
+}
+
+.buttons div {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
-    padding: 58px 10%;
-    gap: 10px
+    gap: 10px;
 }
 
-.text h2 {
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: 4px;
+.emailBtn, .linkedinBtn, .githubBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 30px;
+    background-color: #FFD13A10;
+    padding: 10px 25px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    width: max-content;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.text p {
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 2px;
+.emailBtn {
+    align-self: center;
 }
 
-.links {
+.emailBtn:hover, .linkedinBtn:hover, .githubBtn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    transform: scale(1.1);
+}
+
+.emailBtn:hover p, .linkedinBtn:hover p, .githubBtn:hover p {
+    opacity: 1;
+}
+
+.emailBtn::before, .linkedinBtn::before, .githubBtn::before,
+.emailBtn::after, .linkedinBtn::after, .githubBtn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    border: 2px solid var(--color-primary);
+    opacity: 0;
+    transition: none;
+}
+
+.emailBtn:hover::before, .linkedinBtn:hover::before, .githubBtn:hover::before {
+    animation: ripple 1s ease-out 0s 1 forwards;
+}
+
+.emailBtn:hover::after, .linkedinBtn:hover::after, .githubBtn:hover::after {
+    animation: ripple 1s ease-out 0.1s 1 forwards;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.3, 1.8);
+        opacity: 0;
+    }
+}
+
+.emailBtn img, .linkedinBtn img, .githubBtn img {
+    object-fit: contain;
+    margin-right: 10px;
+    transition: filter 0.3s ease;
+}
+
+.emailBtn:hover img, .linkedinBtn:hover img, .githubBtn:hover img {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(53%) saturate(2600%) hue-rotate(253deg) brightness(80%) contrast(120%);
+}
+
+.emailBtn div, .linkedinBtn div, .githubBtn div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* align to left hand side of column */
-    list-style: none;
-    gap: 26px
+    gap: 0;
 }
 
-.link {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.emailBtn span, .linkedinBtn span, .githubBtn span {
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 700;
+    font-size: 24px;
 }
 
-.link a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 30px;
+.linkedinBtn span, .githubBtn span {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.emailBtn p, .linkedinBtn p, .githubBtn p {
+    font-family: var(--font-ibm-plex-mono);
     font-weight: 400;
-    letter-spacing: 1.5px;
+    font-size: 14px;
+    opacity: 0.5;
+    text-align: left;
 }
 
-@media screen and (max-width: 830px) {
+
+@media screen and (max-width: 1280px) {
     .container {
-        flex-direction: column;
-        gap: 23px;
+        height: auto;
+        min-height: 80vh;
+        padding: 50px 40px;
     }
 
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .container h3 {
+        margin-bottom: 10px;
     }
 
-    .links {
+    .description {
+        max-width: 75%;
+        font-size: 26px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .buttons {
+        gap: 25px;
         align-items: center;
+        width: 80%;
+    }
+
+    .buttons > div {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .emailBtn, .linkedinBtn, .githubBtn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 20px;
+    }
+
+    .emailBtn span, .linkedinBtn span, .githubBtn span {
+        font-size: 16px;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
+
+
+/*ipad pro/air view*/
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    .buttons {
+        width: 90%;
+    }
+
+    .buttons > div {
+        align-items: center;
+        width: auto;
+    }
+
+    .emailBtn, .linkedinBtn, .githubBtn {
+        width: auto;
+        padding: 16px 28px;
+    }
+
+    .emailBtn span, .linkedinBtn span, .githubBtn span {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .emailBtn p, .linkedinBtn p, .githubBtn p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 25px 30px;
+        max-width: 90vw;
+        min-width: 85vw;
+    }
+
+    .title h2 {
+        font-size: 56px;
+    }
+
+    .title div {
+        width: 185px;
+        margin-top: -22px;
+        margin-left: 33px;
+    }
+
+    .container h3 {
+        font-size: 10px;
+    }
+
+    .description {
+        font-size: 15px;
+        max-width: 85%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .buttons > div {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .emailBtn, .linkedinBtn, .githubBtn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 12px;
+    }
+
+    .emailBtn span, .linkedinBtn span, .githubBtn span {
+        font-size: 12px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+/*surface duo view*/
+@media screen and (min-width: 450px) and (max-width: 700px) {
+    .buttons > div {
+        align-items: center;
+        width: auto;
+    }
+
+    .emailBtn, .linkedinBtn, .githubBtn {
+        width: auto;
+        padding: 10px 50px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .container {
+        height: auto;
+        padding: 25px 30px;
+    }
+
+    .title h2 {
+        font-size: 60px;
+    }
+
+    .title div {
+        width: 200px;
+        margin-top: -24px;
+        margin-left: 40px;
+    }
+
+    .description {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .container h3 {
+        display: none;
     }
 }
